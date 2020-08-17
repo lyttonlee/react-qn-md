@@ -1,0 +1,66 @@
+::-webkit-scrollbar {
+  width: 10px; /*对垂直流动条有效*/
+  height: 10px; /*对水平流动条有效*/
+}
+  
+/*定义滚动条的轨道颜色、内阴影及圆角*/
+::-webkit-scrollbar-track{
+  border-radius: 3px;
+}
+
+
+/*定义滑块颜色、内阴影及圆角*/
+::-webkit-scrollbar-thumb{
+  border-radius: 7px;
+}
+img, p, code, blockquote {
+  margin: 10px 0;
+}
+img {
+  width: 100%;
+}
+.show {
+  // background: @dark-bg;
+  font-size: 1rem;
+  line-height: 1.6;
+  word-break : break-all;
+}
+code {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 1.1rem;
+  font-weight: 500;
+  border-radius: 10px;
+  word-break : break-all;
+  overflow: auto;
+  @media screen and (max-width: 750px) {
+    font-size: .9rem;
+    font-weight: 300;
+    border-radius: 5px;
+  }
+}
+
+blockquote {
+  width: 100%;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+table {
+  padding: 10px 0;
+  width: 100%;
+  border-spacing: 0;
+  th {
+    padding: 5px 0;
+    border: 1px solid silver;
+    box-sizing: border-box;
+  }
+  td {
+    padding: 5px 0;
+    border: .5px solid silver;
+    border-top: none;
+    box-sizing: border-box;
+  }
+}

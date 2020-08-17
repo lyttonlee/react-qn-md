@@ -4,6 +4,8 @@ import ReactDOM from 'react-dom'
 import Editor from './editor/Editor'
 
 ReactDOM.render(
-  <Editor />,
+  <Editor getToken={ () => {
+    const token = 'dasadas'
+  }} />,
   document.getElementById('app')
 )
