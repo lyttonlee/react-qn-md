@@ -7,7 +7,22 @@ const config = {
   output: {
     filename: 'react-qn-md.js',
     path: path.join(__dirname, './lib'),
-    libraryTarget: 'commonjs2'
+    libraryTarget: 'umd'
+  },
+  // 造轮子必须这样从外部引入react react-dom 
+  externals: {
+    react: {
+      commonjs: 'react',
+      commonjs2: 'react',
+      amd: 'react',
+      root: 'React',
+    },
+    'react-dom': {
+      commonjs: 'react-dom',
+      commonjs2: 'react-dom',
+      amd: 'react-dom',
+      root: 'ReactDOM',
+    },
   },
   module: {
     rules: [

@@ -1,6 +1,6 @@
 {
   "name": "react-qn-md",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "基于react封装了七牛云上传图片的markdown组件",
   "main": "/lib/react-qn-md.js",
   "scripts": {
@@ -20,8 +20,6 @@
     "html-webpack-plugin": "^4.3.0",
     "less": "^3.12.2",
     "less-loader": "^6.2.0",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
     "style-loader": "^1.2.1",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12",
@@ -32,5 +30,9 @@
     "marked": "^1.1.1",
     "qiniu-js": "^3.1.1",
     "random-string": "^0.2.0"
+  },
+  "peerDependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   }
 }
