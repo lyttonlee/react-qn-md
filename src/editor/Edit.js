@@ -9,7 +9,8 @@ function Edit (props) {
     info,
     onInfoChange,
     domain,
-    token
+    token,
+    customStyle
   } = props
   if (!domain) {
     console.log('缺少必须的七牛云外链域名参数 --> domain, 请添加')
@@ -56,13 +57,14 @@ function Edit (props) {
 
   return (
     <div className="editor-content">
-      <textarea ref={ textRef } value={ textInfo } onDrop={onDrop} onKeyUp={textAraeChange} onChange={ textAraeChange } className="area" placeholder="请使用markdown语法编辑"></textarea>
+      <textarea style={customStyle} ref={ textRef } value={ textInfo } onDrop={onDrop} onKeyUp={textAraeChange} onChange={ textAraeChange } className="area" placeholder="请使用markdown语法编辑"></textarea>
     </div>
   )
 }
 
 Edit.defaultProps = {
-  info: ''
+  info: '',
+  customStyle: ''
 }
 
 export default Edit

@@ -1,7 +1,7 @@
 {
   "name": "react-qn-md",
-  "version": "1.0.4",
-  "description": "基于react封装了七牛云上传图片的markdown组件",
+  "version": "1.1.0",
+  "description": "基于react封装的七牛云上传图片的markdown组件",
   "main": "/lib/react-qn-md.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,7 +9,9 @@
     "build:lib": "webpack --config webpack.prod.js"
   },
   "author": "lytton",
+  "email": "lzr3278@163.com",
   "license": "MIT",
+  "repository": "https://github.com/lyttonlee/react-qn-md",
   "devDependencies": {
     "@babel/cli": "^7.10.5",
     "@babel/core": "^7.11.1",

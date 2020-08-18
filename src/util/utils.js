@@ -8,15 +8,15 @@ export const upload = (file, token, qiniuDomain, imgStyle) => {
   return new Promise((resolve, reject) => {
     qiniu.compressImage(file, {
       quality: 0.9,
-      noCompressIfLarger: true,
-      maxWidth: 750
+      noCompressIfLarger: true
     }).then((data) => {
       // console.log(data)
       const type = file.name.split('.').pop()
       const randomHash = randomStr({
         length: 20
       })
-      // console.log(randomHash)
+      console.log(randomHash)
+      console.log(token)
       const key = randomHash + '.' + type
       const observable = qiniu.upload(data.dist, key, token)
       observable.subscribe({

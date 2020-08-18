@@ -1,11 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import Editor from './editor/Editor'
+// import Editor from './editor/Editor'
+import Page from './Page'
 
 ReactDOM.render(
-  <Editor getToken={ () => {
-    const token = 'dasadas'
-  }} />,
+  <Page />,
   document.getElementById('app')
 )

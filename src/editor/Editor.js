@@ -13,7 +13,8 @@ function Editor(props) {
     theme,
     getToken,
     token,
-    domain
+    domain,
+    customStyle
   } = props
 
   marked.setOptions({
@@ -62,8 +63,8 @@ function Editor(props) {
   }, [])
   return (
     <div id="editor" className={ theme } >
-      { edit && <Edit info={ mdInfo } token={token} domain={domain} onInfoChange={ onMdInfoChange } ></Edit> }
-      <Show htmlInfo ={ htmlInfo }></Show>
+      { edit && <Edit customStyle={customStyle} info={ mdInfo } token={token} domain={domain} onInfoChange={ onMdInfoChange } ></Edit> }
+      <Show htmlInfo ={ htmlInfo } customStyle={customStyle}></Show>
     </div>
   )
 }
@@ -73,7 +74,8 @@ Editor.defaultProps = {
   initInfo: '',
   theme: 'light',
   token: '',
-  domain: ''
+  domain: '',
+  customStyle: {}
 }
 
 export default Editor

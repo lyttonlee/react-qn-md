@@ -33,7 +33,12 @@ const config = {
   devServer: {
     port: 9005,
     hot: true,
-    open: true
+    open: true,
+    proxy: {
+      '/api': {
+        target: 'http://localhost:8901' // 按实际的服务端地址修改
+      }
+    }
   }
 }
 
