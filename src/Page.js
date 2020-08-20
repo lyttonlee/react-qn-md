@@ -15,7 +15,7 @@ function Page () {
     })
   }
   return (
-    <Editor token={token} domain="http://doc.huili.cool/" theme="dark" getToken={getToken} customStyle={{height: '40vh', overflow: 'auto'}} ></Editor>
+    <Editor token={token} domain="http://doc.huili.cool/" edit={true} theme="dark" getToken={getToken} customStyle={{height: '40vh', overflow: 'auto'}} ></Editor>
   )
 }
 

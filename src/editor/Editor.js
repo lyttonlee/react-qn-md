@@ -57,7 +57,7 @@ function Editor(props) {
       getToken()
     }, 120000)
     return () => {
-      marked = null
+      // marked = null
       time && clearInterval(time)
     }
   }, [])
