@@ -64,6 +64,12 @@ function Editor(props) {
       time && clearInterval(time)
     }
   }, [])
+  useEffect(() => {
+    // console.log(initInfo)
+    setMdInfo(initInfo)
+    updateInfo && updateInfo(initInfo)
+    transMdToHtml(initInfo)
+  }, [initInfo])
   return (
     <div id="editor" className={ theme } >
       { edit && <Edit customStyle={customStyle} imgStyle={imgStyle} info={ mdInfo } token={token} domain={domain} onInfoChange={ onMdInfoChange } ></Edit> }

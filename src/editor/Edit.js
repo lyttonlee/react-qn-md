@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import {
   upload,
   isImage
@@ -23,6 +23,9 @@ function Edit (props) {
   // const [token, setToken] = useState('')
 
   // console.log(info)
+  useEffect(() => {
+    setInfo(info)
+  },[info])
   // 编辑区域内容改变时的事件监听
   function textAraeChange (ev) {
     // console.log(ev.target.value)
