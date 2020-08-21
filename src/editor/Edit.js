@@ -10,7 +10,8 @@ function Edit (props) {
     onInfoChange,
     domain,
     token,
-    customStyle
+    customStyle,
+    imgStyle
   } = props
   if (!domain) {
     console.log('缺少必须的七牛云外链域名参数 --> domain, 请添加')
@@ -42,7 +43,7 @@ function Edit (props) {
     const files = ev.dataTransfer.files
     for (let i = 0; i < files.length; i++) {
       if (isImage(files[i])) {
-        upload(files[i], token, domain).then((url) => {
+        upload(files[i], token, domain, imgStyle).then((url) => {
           const imgStr = `![${files[i].name}](${url})\n`
           myField.value = myField.value.substring(0, start) + imgStr + myField.value.substring(start, myField.value.length)
           setInfo(myField.value)
@@ -64,7 +65,8 @@ function Edit (props) {
 
 Edit.defaultProps = {
   info: '',
-  customStyle: ''
+  customStyle: '',
+  imgStyle: ''
 }
 
 export default Edit

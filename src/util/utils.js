@@ -15,8 +15,8 @@ export const upload = (file, token, qiniuDomain, imgStyle) => {
       const randomHash = randomStr({
         length: 20
       })
-      console.log(randomHash)
-      console.log(token)
+      // console.log(randomHash)
+      // console.log(token)
       const key = randomHash + '.' + type
       const observable = qiniu.upload(data.dist, key, token)
       observable.subscribe({

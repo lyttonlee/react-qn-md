@@ -22,6 +22,7 @@ yarn add react-qn-md -S
 | :--: | :--: | :--: | :--: | :--: |
 | initInfo | false | string | '' | 初始的md语法字符串 |
 | theme | false | string | light | 颜色主题 'light' ,'dark' 可选 |
+| imgStyle | false | string | --- | 七牛云图片样式规则 |
 | domain | true |  string| --- | 七牛云空间的外链域名 |
 | customStyle | false |  object| --- | 自定义编辑框的样式 |
 | edit | false |  bool| true | 是否显示编辑框,false时用于展示 |
@@ -34,14 +35,13 @@ yarn add react-qn-md -S
 
 ```jsx
 import React, {useState} from 'react';
-// import logo from './logo.svg';
 import './App.css';
 import Editor from 'react-qn-md'
 
 function App() {
   const [token, setToken] = useState('')
   const getToken = () => {
-    fetch('/api/uptoken', {
+    fetch('http://www.huili.cool:8901/api/uptoken', {
       method: 'GET'
     }).then((res) => {
       if (res.status === 200) {
@@ -51,13 +51,19 @@ function App() {
       }
     })
   }
+  const updateInfo = (info) => {
+    // do something with new info
+    // save or submit ...
+    console.log(info)
+  }
   return (
     <div className="App">
       <Editor
         initInfo="## Hello World!"
-        domain="http://doc.huili.cool/"
+        domain="http://editor.huili.cool/"
         token={token}
         getToken={getToken}
+        updateInfo={updateInfo}
         theme="light"
         customStyle={{height: '40vh', overflow: 'auto'}} >
       </Editor>

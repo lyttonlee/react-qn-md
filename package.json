@@ -1,6 +1,6 @@
 {
   "name": "react-qn-md",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "description": "基于react封装的七牛云上传图片的markdown组件",
   "main": "/lib/react-qn-md.js",
   "scripts": {

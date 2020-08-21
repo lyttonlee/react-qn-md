@@ -20,7 +20,7 @@ function Page () {
     console.log(info)
   }
   return (
-    <Editor token={token} domain="http://doc.huili.cool/" updateInfo={updateInfo} edit={true} theme="dark" getToken={getToken} customStyle={{height: '40vh', overflow: 'auto'}} ></Editor>
+    <Editor token={token} domain="http://editor.huili.cool/" updateInfo={updateInfo} edit={true} theme="dark" getToken={getToken} customStyle={{height: '40vh', overflow: 'auto'}} imgStyle="@center600" ></Editor>
   )
 }
 
