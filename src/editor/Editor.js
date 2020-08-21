@@ -42,7 +42,7 @@ function Editor(props) {
   function onMdInfoChange (info) {
     // console.log(info)
     setMdInfo(info)
-    updateInfo(info)
+    updateInfo && updateInfo(info)
     transMdToHtml(info)
   }
 
@@ -55,9 +55,9 @@ function Editor(props) {
   }
 
   useEffect(() => {
-    getToken()
+    getToken && getToken()
     const time = setInterval(() => {
-      getToken()
+      getToken && getToken()
     }, 120000)
     return () => {
       // marked = null
@@ -79,7 +79,9 @@ Editor.defaultProps = {
   token: '',
   domain: '',
   customStyle: {},
-  imgStyle: ''
+  imgStyle: '',
+  updateInfo: null,
+  getToken: null
 }
 
 export default Editor

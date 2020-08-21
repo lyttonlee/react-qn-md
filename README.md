@@ -23,13 +23,14 @@ yarn add react-qn-md -S
 | initInfo | false | string | '' | 初始的md语法字符串 |
 | theme | false | string | light | 颜色主题 'light' ,'dark' 可选 |
 | imgStyle | false | string | --- | 七牛云图片样式规则 |
-| domain | true |  string| --- | 七牛云空间的外链域名 |
+| domain | false |  string| --- | 七牛云空间的外链域名 |
 | customStyle | false |  object| --- | 自定义编辑框的样式 |
 | edit | false |  bool| true | 是否显示编辑框,false时用于展示 |
-| token | true |  string| '' | 七牛云上传token |
-| getToken | true |  function | --- | 实现获取七牛云上传token |
-| updateInfo | true |  function | param -> mdInfo | 返回最新markdown内容 |
+| token | false |  string| '' | 七牛云上传token |
+| getToken | false |  function | --- | 实现获取七牛云上传token |
+| updateInfo | false |  function | param -> mdInfo | 返回最新markdown内容 |
 
+> 如果需要上传图片功能 则 domain token getToken 是必须的
 
 ## Use
 
