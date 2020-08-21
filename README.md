@@ -11,6 +11,9 @@ or
 yarn add react-qn-md -S
 ```
 
+## 在线体验 & Demo
+[Demo](http://www.huili.cool/editor)
+
 ## api
 
 **属性 props**
@@ -23,7 +26,8 @@ yarn add react-qn-md -S
 | customStyle | false |  object| --- | 自定义编辑框的样式 |
 | edit | false |  bool| true | 是否显示编辑框,false时用于展示 |
 | token | true |  string| '' | 七牛云上传token |
-| getToken | true |  function |  | 实现获取七牛云上传token |
+| getToken | true |  function | --- | 实现获取七牛云上传token |
+| updateInfo | true |  function | param -> mdInfo | 返回最新markdown内容 |
 
 
 ## Use

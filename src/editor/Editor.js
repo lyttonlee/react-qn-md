@@ -14,7 +14,8 @@ function Editor(props) {
     getToken,
     token,
     domain,
-    customStyle
+    customStyle,
+    updateInfo
   } = props
 
   marked.setOptions({
@@ -40,6 +41,7 @@ function Editor(props) {
   function onMdInfoChange (info) {
     // console.log(info)
     setMdInfo(info)
+    updateInfo(info)
     transMdToHtml(info)
   }
 
