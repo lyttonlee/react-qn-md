@@ -1,6 +1,6 @@
 {
   "name": "react-qn-md",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "基于react封装的七牛云上传图片的markdown组件",
   "main": "/lib/react-qn-md.js",
   "scripts": {
@@ -32,9 +32,7 @@
     "highlight.js": "^10.1.2",
     "marked": "^1.1.1",
     "qiniu-js": "^3.1.1",
-    "random-string": "^0.2.0",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "random-string": "^0.2.0"
   },
   "peerDependencies": {
     "react": "^16.13.1",
